@@ -1,0 +1,14 @@
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHomModel\bin\Debug\net7.0\LuxHomModel.deps.json
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHomModel\bin\Debug\net7.0\LuxHomModel.runtimeconfig.json
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHomModel\bin\Debug\net7.0\LuxHomModel.dll
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHomModel\bin\Debug\net7.0\LuxHomModel.pdb
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHomModel\obj\Debug\net7.0\LuxHomModel.csproj.AssemblyReference.cache
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHomModel\obj\Debug\net7.0\LuxHomModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHomModel\obj\Debug\net7.0\LuxHomModel.AssemblyInfoInputs.cache
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHomModel\obj\Debug\net7.0\LuxHomModel.AssemblyInfo.cs
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHomModel\obj\Debug\net7.0\LuxHomModel.csproj.CoreCompileInputs.cache
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHomModel\obj\Debug\net7.0\LuxHomModel.dll
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHomModel\obj\Debug\net7.0\refint\LuxHomModel.dll
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHomModel\obj\Debug\net7.0\LuxHomModel.pdb
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHomModel\obj\Debug\net7.0\LuxHomModel.genruntimeconfig.cache
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHomModel\obj\Debug\net7.0\ref\LuxHomModel.dll

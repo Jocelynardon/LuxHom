@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuxHom", "LuxHom.csproj", "{FF440EE8-653C-4BA1-9175-69E9A14CE868}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxHomModel", "..\LuxHomModel\LuxHomModel.csproj", "{D47CBB6B-7038-4138-8E5E-7229295A0222}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxHomAPI", "..\LuxHomAPI\LuxHomAPI.csproj", "{7458F67B-D1C8-4EB3-9381-FE2875EC0C7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{FF440EE8-653C-4BA1-9175-69E9A14CE868}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF440EE8-653C-4BA1-9175-69E9A14CE868}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF440EE8-653C-4BA1-9175-69E9A14CE868}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D47CBB6B-7038-4138-8E5E-7229295A0222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D47CBB6B-7038-4138-8E5E-7229295A0222}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D47CBB6B-7038-4138-8E5E-7229295A0222}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D47CBB6B-7038-4138-8E5E-7229295A0222}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7458F67B-D1C8-4EB3-9381-FE2875EC0C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7458F67B-D1C8-4EB3-9381-FE2875EC0C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7458F67B-D1C8-4EB3-9381-FE2875EC0C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7458F67B-D1C8-4EB3-9381-FE2875EC0C7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

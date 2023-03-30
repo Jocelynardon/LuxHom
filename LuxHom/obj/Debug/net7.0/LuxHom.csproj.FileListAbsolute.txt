@@ -19,12 +19,6 @@ C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\Microsof
 C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\MySql.Data.dll
-C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\ZstdNet.dll
-C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\comerr64.dll
-C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\gssapi64.dll
-C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\k5sprt64.dll
-C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\krb5_64.dll
-C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\krbcc64.dll
 C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\MySql.EntityFrameworkCore.dll
 C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\BouncyCastle.Crypto.dll
 C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\System.CodeDom.dll
@@ -286,3 +280,10 @@ C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\runtimes
 C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\runtimes\win-x64\native\comerr64.dll
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\runtimes\win-x64\native\gssapi64.dll
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\runtimes\win-x64\native\krb5_64.dll
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\runtimes\win-x64\native\krbcc64.dll
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\LuxHomModel.dll
+C:\Users\Jocelyn Ardón\Documents\GitHub\LuxHom\LuxHom\bin\Debug\net7.0\LuxHomModel.pdb

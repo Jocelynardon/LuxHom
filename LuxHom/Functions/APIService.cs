@@ -5,9 +5,9 @@ namespace LuxHom.Functions
     public class APIService
     {
         private static readonly int timeout = 600;
-        private static readonly string baseurl = "http://localhost:7067/";
+        private static readonly string baseurl = "https://localhost:7067/";
 
-        public static async Task<IEnumerable<LuxHomModel.ArticuloPrefabricado>> APGetList()
+        public static async Task<IEnumerable<LuxHom.Models.ArticuloPrefabricado>> APGetList()
         {
             HttpClientHandler clientHandler = new()
             {
@@ -23,7 +23,7 @@ namespace LuxHom.Functions
 
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
-                return JsonConvert.DeserializeObject<IEnumerable<LuxHomModel.ArticuloPrefabricado>>(await response.Content.ReadAsStringAsync());
+                return JsonConvert.DeserializeObject<IEnumerable<LuxHom.Models.ArticuloPrefabricado>>(await response.Content.ReadAsStringAsync());
             }
             else
             {

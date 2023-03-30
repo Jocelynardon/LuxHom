@@ -24,7 +24,7 @@ namespace LuxHom.Controllers
             //return _context.ArticuloPrefabricados != null ? 
             //            View(await _context.ArticuloPrefabricados.ToListAsync()) :
             //            Problem("Entity set 'LuxHom1Context.ArticuloPrefabricados'  is null.");
-            IEnumerable<LuxHomModel.ArticuloPrefabricado> articuloPrefabricados = await Functions.APIService.APGetList().Result;
+            var articuloPrefabricados = await Functions.APIService.APGetList();
             return View(articuloPrefabricados.ToList());
         }
 

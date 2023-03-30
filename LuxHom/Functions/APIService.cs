@@ -95,5 +95,93 @@ namespace LuxHom.Functions
                 throw new Exception(response.StatusCode.ToString());
             }
         }
+
+        public static async Task<IEnumerable<LuxHom.Models.ArticuloPrefabricado>> PubGetList()
+        {
+            HttpClientHandler clientHandler = new()
+            {
+                ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; }
+            };
+
+            HttpClient httpClient = new(clientHandler)
+            {
+                Timeout = TimeSpan.FromSeconds(timeout)
+            };
+
+            HttpResponseMessage response = await httpClient.PostAsync(baseurl + "Publicaciones/GetList", null);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return JsonConvert.DeserializeObject<IEnumerable<LuxHom.Models.ArticuloPrefabricado>>(await response.Content.ReadAsStringAsync());
+            }
+            else
+            {
+                throw new Exception(response.StatusCode.ToString());
+            }
+        }
+        public static async Task<bool> PubSet(LuxHom.Models.Publicacion publicacion)
+        {
+            var json_ = JsonConvert.SerializeObject(publicacion);
+            var content = new StringContent(json_, Encoding.UTF8, "application/json");
+            HttpClientHandler clientHandler = new HttpClientHandler();
+            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+            // Pass the handler to httpclient(from you are calling api)
+            HttpClient httpClient = new HttpClient(clientHandler);
+            httpClient.Timeout = TimeSpan.FromSeconds(timeout);
+            var response = await httpClient.PostAsync(baseurl + "Publicaciones/Set", content);
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return true;
+            }
+            else
+            {
+                throw new Exception(response.StatusCode.ToString());
+            }
+        }
+        public static async System.Threading.Tasks.Task<bool> PubUpdate(LuxHom.Models.Publicacion publicacion)
+        {
+            var json_ = JsonConvert.SerializeObject(publicacion);
+            var content = new StringContent(json_, Encoding.UTF8, "application/json");
+            HttpClientHandler clientHandler = new HttpClientHandler();
+            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+            // Pass the handler to httpclient(from you are calling api)
+            HttpClient httpClient = new HttpClient(clientHandler);
+            httpClient.Timeout = TimeSpan.FromSeconds(timeout);
+            var response = await httpClient.PostAsync(baseurl + "Publicaciones/Update", content);
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return true;
+            }
+            else
+            {
+                throw new Exception(response.StatusCode.ToString());
+            }
+        }
+        public static async System.Threading.Tasks.Task<bool> PubDelete(int id)
+        {
+            var json_ = JsonConvert.SerializeObject(id);
+            var content = new StringContent(json_, Encoding.UTF8, "application/json");
+            HttpClientHandler clientHandler = new()
+            {
+                ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; }
+            };
+
+            HttpClient httpClient = new(clientHandler)
+            {
+                Timeout = TimeSpan.FromSeconds(timeout)
+            };
+
+            HttpResponseMessage response = await httpClient.PostAsync(baseurl + "Publicaciones/Delete", content);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                //return JsonConvert.DeserializeObject<IEnumerable<ClasificacionPeliculasModel.Movie>>(await response.Content.ReadAsStringAsync());
+                return true;
+            }
+            else
+            {
+                throw new Exception(response.StatusCode.ToString());
+            }
+        }
     }
 }

@@ -21,9 +21,11 @@ namespace LuxHom.Controllers
         // GET: Publicacion
         public async Task<IActionResult> Index()
         {
-              return _context.Publicacions != null ? 
-                          View(await _context.Publicacions.ToListAsync()) :
-                          Problem("Entity set 'LuxHom1Context.Publicacions'  is null.");
+            //return _context.Publicacions != null ? 
+            //            View(await _context.Publicacions.ToListAsync()) :
+            //            Problem("Entity set 'LuxHom1Context.Publicacions'  is null.");
+            var publicacion = await Functions.APIService.PubGetList();
+            return View(publicacion.ToList());
         }
 
         // GET: Publicacion/Details/5
@@ -55,15 +57,17 @@ namespace LuxHom.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Descripcion")] Publicacion publicacion)
+        public async Task<IActionResult> Create([Bind("Id,Nombre,Descripcion")] LuxHom.Models.Publicacion publicacion)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(publicacion);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(publicacion);
+            //if (ModelState.IsValid)
+            //{
+            //    _context.Add(publicacion);
+            //    await _context.SaveChangesAsync();
+            //    return RedirectToAction(nameof(Index));
+            //}
+            //return View(publicacion);
+            var publicaciones = await Functions.APIService.PubSet(publicacion);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Publicacion/Edit/5
@@ -87,34 +91,36 @@ namespace LuxHom.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Descripcion")] Publicacion publicacion)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Descripcion")] LuxHom.Models.Publicacion publicacion)
         {
-            if (id != publicacion.Id)
-            {
-                return NotFound();
-            }
+            //if (id != publicacion.Id)
+            //{
+            //    return NotFound();
+            //}
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(publicacion);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!PublicacionExists(publicacion.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(publicacion);
+            //if (ModelState.IsValid)
+            //{
+            //    try
+            //    {
+            //        _context.Update(publicacion);
+            //        await _context.SaveChangesAsync();
+            //    }
+            //    catch (DbUpdateConcurrencyException)
+            //    {
+            //        if (!PublicacionExists(publicacion.Id))
+            //        {
+            //            return NotFound();
+            //        }
+            //        else
+            //        {
+            //            throw;
+            //        }
+            //    }
+            //    return RedirectToAction(nameof(Index));
+            //}
+            //return View(publicacion);
+            var publicaciones = await Functions.APIService.PubUpdate(publicacion);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Publicacion/Delete/5
@@ -140,17 +146,19 @@ namespace LuxHom.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Publicacions == null)
-            {
-                return Problem("Entity set 'LuxHom1Context.Publicacions'  is null.");
-            }
-            var publicacion = await _context.Publicacions.FindAsync(id);
-            if (publicacion != null)
-            {
-                _context.Publicacions.Remove(publicacion);
-            }
-            
-            await _context.SaveChangesAsync();
+            //if (_context.Publicacions == null)
+            //{
+            //    return Problem("Entity set 'LuxHom1Context.Publicacions'  is null.");
+            //}
+            //var publicacion = await _context.Publicacions.FindAsync(id);
+            //if (publicacion != null)
+            //{
+            //    _context.Publicacions.Remove(publicacion);
+            //}
+
+            //await _context.SaveChangesAsync();
+            //return RedirectToAction(nameof(Index));
+            var publicaciones = await Functions.APIService.PubDelete(Convert.ToInt32(id));
             return RedirectToAction(nameof(Index));
         }
 

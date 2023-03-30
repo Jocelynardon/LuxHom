@@ -57,15 +57,17 @@ namespace LuxHom.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Descripcion,Costo,Precio")] ArticuloPrefabricado articuloPrefabricado)
+        public async Task<IActionResult> Create([Bind("Id,Nombre,Descripcion,Costo,Precio")] LuxHom.Models.ArticuloPrefabricado articuloPrefabricado)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(articuloPrefabricado);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(articuloPrefabricado);
+            //if (ModelState.IsValid)
+            //{
+            //    _context.Add(articuloPrefabricado);
+            //    await _context.SaveChangesAsync();
+            //    return RedirectToAction(nameof(Index));
+            //}
+            //return View(articuloPrefabricado);
+            var articuloPrefabricados = await Functions.APIService.APSet(articuloPrefabricado);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: ArticuloPrefabricado/Edit/5
@@ -89,34 +91,36 @@ namespace LuxHom.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Descripcion,Costo,Precio")] ArticuloPrefabricado articuloPrefabricado)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Descripcion,Costo,Precio")] LuxHom.Models.ArticuloPrefabricado articuloPrefabricado)
         {
-            if (id != articuloPrefabricado.Id)
-            {
-                return NotFound();
-            }
+            //if (id != articuloPrefabricado.Id)
+            //{
+            //    return NotFound();
+            //}
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(articuloPrefabricado);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ArticuloPrefabricadoExists(articuloPrefabricado.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(articuloPrefabricado);
+            //if (ModelState.IsValid)
+            //{
+            //    try
+            //    {
+            //        _context.Update(articuloPrefabricado);
+            //        await _context.SaveChangesAsync();
+            //    }
+            //    catch (DbUpdateConcurrencyException)
+            //    {
+            //        if (!ArticuloPrefabricadoExists(articuloPrefabricado.Id))
+            //        {
+            //            return NotFound();
+            //        }
+            //        else
+            //        {
+            //            throw;
+            //        }
+            //    }
+            //    return RedirectToAction(nameof(Index));
+            //}
+            //return View(articuloPrefabricado);
+            var articuloPrefabricados = await Functions.APIService.APUpdate(articuloPrefabricado);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: ArticuloPrefabricado/Delete/5
@@ -142,17 +146,19 @@ namespace LuxHom.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.ArticuloPrefabricados == null)
-            {
-                return Problem("Entity set 'LuxHom1Context.ArticuloPrefabricados'  is null.");
-            }
-            var articuloPrefabricado = await _context.ArticuloPrefabricados.FindAsync(id);
-            if (articuloPrefabricado != null)
-            {
-                _context.ArticuloPrefabricados.Remove(articuloPrefabricado);
-            }
-            
-            await _context.SaveChangesAsync();
+            //if (_context.ArticuloPrefabricados == null)
+            //{
+            //    return Problem("Entity set 'LuxHom1Context.ArticuloPrefabricados'  is null.");
+            //}
+            //var articuloPrefabricado = await _context.ArticuloPrefabricados.FindAsync(id);
+            //if (articuloPrefabricado != null)
+            //{
+            //    _context.ArticuloPrefabricados.Remove(articuloPrefabricado);
+            //}
+
+            //await _context.SaveChangesAsync();
+            //return RedirectToAction(nameof(Index));
+            var articuloPrefabricados = await Functions.APIService.APDelete(Convert.ToInt32(id));
             return RedirectToAction(nameof(Index));
         }
 

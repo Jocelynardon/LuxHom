@@ -7,23 +7,17 @@ public partial class Usuario
 {
     public string Usuario1 { get; set; } = null!;
 
+    public string Email { get; set; }
+
     public string Password { get; set; } = null!;
 
-    public string Nombres { get; set; } = null!;
+    public DateTime? FechaTransac { get; set; }
 
-    public string PrimerAppelido { get; set; } = null!;
+    public string? UsuarioElimina { get; set; }
 
-    public string SegundoApellido { get; set; } = null!;
+    public DateTime? FechaTransacElimina { get; set; }
 
-    public string? ApellidoCasada { get; set; }
+    public sbyte Vigente { get; set; }
 
-    public string Direccion { get; set; } = null!;
-
-    public string? Nacionalidad { get; set; }
-
-    public string Email { get; set; } = null!;
-
-    public int? Telefono { get; set; }
-
-    public DateTime FechaNacimiento { get; set; }
+    public virtual ICollection<Persona> Personas { get; set; } = new List<Persona>();
 }

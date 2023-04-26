@@ -6,8 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var conexion = builder.Configuration.GetConnectionString("ConnectionDB");
-builder.Services.AddDbContext<LuxHom1Context>(Options => Options.UseMySQL(conexion));
+//var conexion = builder.Configuration.GetConnectionString("ConnectionDB");
+//builder.Services.AddDbContext<LuxHom1Context>(Options => Options.UseMySQL(conexion));
 
 var app = builder.Build();
 

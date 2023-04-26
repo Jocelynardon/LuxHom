@@ -10,8 +10,18 @@ namespace LuxHomModel
     {
         public int Id { get; set; }
 
-        public string Nombre { get; set; } = null!;
+        public string Titulo { get; set; } = null!;
 
-        public string Descripcion { get; set; } = null!;
+        public string? Contenido { get; set; }
+
+        public string Autor { get; set; } = null!;
+
+        public DateTime? FechaCreacion { get; set; }
+
+        public DateTime? FechaActualizacion { get; set; }
+
+        public DateTime FechaInicio { get; set; }
+
+        public DateTime? FechaFin { get; set; }
     }
 }

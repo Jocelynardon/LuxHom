@@ -10,22 +10,16 @@ namespace LuxHomModel
     {
         public string Usuario1 { get; set; } = null!;
 
-        public string Password { get; set; } = null!;
-
-        public string Nombres { get; set; } = null!;
-
-        public string PrimerAppelido { get; set; } = null!;
-
-        public string SegundoApellido { get; set; } = null!;
-
-        public string? ApellidoCasada { get; set; }
-
-        public string Direccion { get; set; } = null!;
-
-        public string? Nacionalidad { get; set; }
-
         public string Email { get; set; } = null!;
 
-        public int? Telefono { get; set; }
+        public string Password { get; set; } = null!;
+
+        public DateTime? FechaTransac { get; set; }
+
+        public string? UsuarioElimina { get; set; }
+
+        public DateTime? FechaTransacElimina { get; set; }
+
+        public sbyte Vigente { get; set; }
     }
 }

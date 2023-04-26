@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuxHom", "LuxHom.csproj", "{FF440EE8-653C-4BA1-9175-69E9A14CE868}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuxHomModel", "..\LuxHomModel\LuxHomModel.csproj", "{D47CBB6B-7038-4138-8E5E-7229295A0222}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxHomModel", "..\LuxHomModel\LuxHomModel.csproj", "{D47CBB6B-7038-4138-8E5E-7229295A0222}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuxHomAPI", "..\LuxHomAPI\LuxHomAPI.csproj", "{0DE468AD-CC49-426D-AA9F-CFE80ECC0E1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxHomAPI", "..\LuxHomAPI\LuxHomAPI.csproj", "{7458F67B-D1C8-4EB3-9381-FE2875EC0C7A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxHom", "LuxHom\LuxHom.csproj", "{04E32756-511C-45CE-92E3-637B8EAB995E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FF440EE8-653C-4BA1-9175-69E9A14CE868}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF440EE8-653C-4BA1-9175-69E9A14CE868}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF440EE8-653C-4BA1-9175-69E9A14CE868}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF440EE8-653C-4BA1-9175-69E9A14CE868}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D47CBB6B-7038-4138-8E5E-7229295A0222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D47CBB6B-7038-4138-8E5E-7229295A0222}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D47CBB6B-7038-4138-8E5E-7229295A0222}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D47CBB6B-7038-4138-8E5E-7229295A0222}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7458F67B-D1C8-4EB3-9381-FE2875EC0C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7458F67B-D1C8-4EB3-9381-FE2875EC0C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7458F67B-D1C8-4EB3-9381-FE2875EC0C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7458F67B-D1C8-4EB3-9381-FE2875EC0C7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DE468AD-CC49-426D-AA9F-CFE80ECC0E1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DE468AD-CC49-426D-AA9F-CFE80ECC0E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DE468AD-CC49-426D-AA9F-CFE80ECC0E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DE468AD-CC49-426D-AA9F-CFE80ECC0E1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04E32756-511C-45CE-92E3-637B8EAB995E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04E32756-511C-45CE-92E3-637B8EAB995E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04E32756-511C-45CE-92E3-637B8EAB995E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04E32756-511C-45CE-92E3-637B8EAB995E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

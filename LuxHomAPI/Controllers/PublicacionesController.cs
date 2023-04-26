@@ -6,16 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using LuxHomAPI.Models;
+using Google.Protobuf.WellKnownTypes;
 
 namespace LuxHomAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-
     public class PublicacionesController : Controller
     {
         private readonly LuxHom1Context _context;
-
         public PublicacionesController(LuxHom1Context context)
         {
             _context = context;
@@ -30,8 +29,13 @@ namespace LuxHomAPI.Controllers
             new LuxHomAPI.Models.Publicacion
             {
                 Id = s.Id,
-                Nombre = s.Nombre,
-                Descripcion = s.Descripcion
+                Titulo = s.Titulo,
+                Contenido = s.Contenido,
+                Autor = s.Autor,
+                FechaCreacion = s.FechaCreacion,
+                FechaActualizacion= s.FechaActualizacion,
+                FechaInicio = s.FechaInicio,
+                FechaFin = s.FechaFin
             }
             ).ToListAsync();
             return publicaciones;
@@ -50,8 +54,13 @@ namespace LuxHomAPI.Controllers
                 Models.Publicacion publicacion1 = new Models.Publicacion
                 {
                     Id = publicacion.Id,
-                    Nombre = publicacion.Nombre,
-                    Descripcion = publicacion.Descripcion
+                    Titulo = publicacion.Titulo,
+                    Contenido = publicacion.Contenido,
+                    Autor = publicacion.Autor,
+                    FechaCreacion = publicacion.FechaCreacion,
+                    FechaActualizacion = publicacion.FechaActualizacion,
+                    FechaInicio = publicacion.FechaInicio,
+                    FechaFin = publicacion.FechaFin
                 };
 
                 _context.Publicacions.Add(publicacion1);
@@ -79,8 +88,13 @@ namespace LuxHomAPI.Controllers
                 Models.Publicacion publicacion1 = new Models.Publicacion
                 {
                     Id = publicacion.Id,
-                    Nombre = publicacion.Nombre,
-                    Descripcion = publicacion.Descripcion
+                    Titulo = publicacion.Titulo,
+                    Contenido = publicacion.Contenido,
+                    Autor = publicacion.Autor,
+                    FechaCreacion = publicacion.FechaCreacion,
+                    FechaActualizacion = DateTime.Now,
+                    FechaInicio = publicacion.FechaInicio,
+                    FechaFin = publicacion.FechaFin
                 };
 
                 _context.Publicacions.Update(publicacion1);
@@ -109,8 +123,13 @@ namespace LuxHomAPI.Controllers
                 new LuxHomAPI.Models.Publicacion
                 {
                     Id = s.Id,
-                    Nombre = s.Nombre,
-                    Descripcion = s.Descripcion
+                    Titulo = s.Titulo,
+                    Contenido = s.Contenido,
+                    Autor = s.Autor,
+                    FechaCreacion = s.FechaCreacion,
+                    FechaActualizacion = s.FechaActualizacion,
+                    FechaInicio = s.FechaInicio,
+                    FechaFin = s.FechaFin
                 }
                 ).FirstOrDefaultAsync(s => s.Id == id);
                 _context.Publicacions.Remove(publicacion);

@@ -1,0 +1,43 @@
+﻿@model LuxHom.Models.Usuario
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <img src="~/Images/Logo.jpeg" />
+    <h1 class="display-4">Bienvenido</h1>
+    <div class="form-group">
+        <form asp-action="Index">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <label asp-for="Usuario1" class="control-label">Usuario</label>
+                    <input asp-for="Usuario1" class="form-control" />
+                    <span asp-validation-for="Usuario1" class="text-danger"></span>
+                </div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control" type="password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row">
+                <p></p>
+                <div class="form-group">
+                    <input type="submit" value="Iniciar Sesión" class="btn btn-primary" />
+                </div>
+            </div>
+            <div class="row">
+                <p></p>
+                <div class="form-group">
+                    <a class="nav-link text-dark border-bottom" asp-area="" asp-controller="Usuario" asp-action="Create">Registrarse</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

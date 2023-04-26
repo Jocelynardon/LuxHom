@@ -1,0 +1,60 @@
+﻿@model LuxHom.Models.Usuario
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Usuario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Usuario1" />
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="FechaTransac" class="control-label"></label>
+                <input asp-for="FechaTransac" class="form-control" />
+                <span asp-validation-for="FechaTransac" class="text-danger"></span>
+            </div>*@
+            @*<div class="form-group">
+                <label asp-for="UsuarioElimina" class="control-label"></label>
+                <input asp-for="UsuarioElimina" class="form-control" />
+                <span asp-validation-for="UsuarioElimina" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaTransacElimina" class="control-label"></label>
+                <input asp-for="FechaTransacElimina" class="form-control" />
+                <span asp-validation-for="FechaTransacElimina" class="text-danger"></span>
+            </div>*@
+            @*<div class="form-group">
+                <label asp-for="Vigente" class="control-label"></label>
+                <input asp-for="Vigente" class="form-control" />
+                <span asp-validation-for="Vigente" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <p></p>
+                <input type="submit" value="Guardar cambios" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

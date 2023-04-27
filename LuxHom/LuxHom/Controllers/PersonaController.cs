@@ -19,7 +19,6 @@ namespace LuxHom.Controllers
             _context = context;
         }
         [Authorize]
-        // GET: Personas
         public async Task<IActionResult> Index()
         {
             var personas = await Functions.APIService.PersonaGetList();

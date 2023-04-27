@@ -127,7 +127,10 @@ namespace LuxHomAPI.Controllers
                     Vigente = s.Vigente
                 }
                 ).FirstOrDefaultAsync(s => s.Usuario1 == usuario1.Usuario1 && s.Password == usuario1.Password);
-                generalResult.Result = true;
+                if(usuario!= null)
+                {
+                    generalResult.Result = true;
+                }
             }
             catch (Exception ex)
             {

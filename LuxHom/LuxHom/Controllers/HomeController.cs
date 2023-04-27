@@ -33,24 +33,25 @@ namespace LuxHom.Controllers
                 var usuario1 = usuario;
                 var token = await Functions.APIService.AutenticacionGetToken(usuario1);
                 var claims = new List<Claim>();
-
                 claims.Add(new Claim("usuario", usuario1.Usuario1));
-
                 claims.Add(new Claim("token", token.token));
-
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
                 var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-
                 await HttpContext.SignInAsync(claimsPrincipal);
-
                 return RedirectToAction("Index", "Persona");
             }
             else
             {
                 return View();
             }
-            
+
+        }
+
+        public async Task<IActionResult> Close()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult Privacy()

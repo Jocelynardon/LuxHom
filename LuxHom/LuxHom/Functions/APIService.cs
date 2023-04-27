@@ -203,7 +203,7 @@ namespace LuxHom.Functions
 
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
-                return true;
+                return JsonConvert.DeserializeObject<bool>(await response.Content.ReadAsStringAsync());
             }
             else
             {
@@ -467,8 +467,8 @@ namespace LuxHom.Functions
 
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
-                //return JsonConvert.DeserializeObject<IEnumerable<ClasificacionPeliculasModel.Movie>>(await response.Content.ReadAsStringAsync());
-                return true;
+                return JsonConvert.DeserializeObject<bool>(await response.Content.ReadAsStringAsync());
+                
             }
             else
             {

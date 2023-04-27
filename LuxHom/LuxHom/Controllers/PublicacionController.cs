@@ -29,6 +29,7 @@ namespace LuxHom.Controllers
 
         }
 
+        [Authorize]
         // GET: Publicacions/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -47,12 +48,14 @@ namespace LuxHom.Controllers
             return View(publicacion);
         }
 
+        [Authorize]
         // GET: Publicacions/Create
         public IActionResult Create()
         {
             return View();
         }
 
+        [Authorize]
         // POST: Publicacions/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -64,6 +67,7 @@ namespace LuxHom.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize]
         // GET: Publicacions/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -80,6 +84,7 @@ namespace LuxHom.Controllers
             return View(publicacion);
         }
 
+        [Authorize]
         // POST: Publicacions/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -91,6 +96,7 @@ namespace LuxHom.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize]
         // GET: Publicacions/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -109,6 +115,7 @@ namespace LuxHom.Controllers
             return View(publicacion);
         }
 
+        [Authorize]
         // POST: Publicacions/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

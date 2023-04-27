@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LuxHom.Controllers
 {
@@ -48,6 +49,7 @@ namespace LuxHom.Controllers
 
         }
 
+        [Authorize]
         public async Task<IActionResult> Close()
         {
             await HttpContext.SignOutAsync();

@@ -20,13 +20,14 @@ namespace LuxHom.Controllers
         }
 
         [Authorize]
-        // GET: Productoes
+        // GET: Productos
         public async Task<IActionResult> Index()
         {
             var productos = await Functions.APIService.ProductoGetList();
             return View(productos.ToList());
         }
 
+        [Authorize]
         // GET: Productoes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -45,12 +46,14 @@ namespace LuxHom.Controllers
             return View(producto);
         }
 
+        [Authorize]
         // GET: Productoes/Create
         public IActionResult Create()
         {
             return View();
         }
 
+        [Authorize]
         // POST: Productoes/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -62,6 +65,7 @@ namespace LuxHom.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize]
         // GET: Productoes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -78,6 +82,7 @@ namespace LuxHom.Controllers
             return View(producto);
         }
 
+        [Authorize]
         // POST: Productoes/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -89,6 +94,7 @@ namespace LuxHom.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize]
         // GET: Productoes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -107,6 +113,7 @@ namespace LuxHom.Controllers
             return View(producto);
         }
 
+        [Authorize]
         // POST: Productoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

@@ -27,6 +27,7 @@ namespace LuxHom.Controllers
             return View(pedidos.ToList());
         }
 
+        [Authorize]
         // GET: Pedidoes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -47,6 +48,7 @@ namespace LuxHom.Controllers
             return View(pedido);
         }
 
+        [Authorize]
         // GET: Pedidoes/Create
         public IActionResult Create()
         {
@@ -55,6 +57,7 @@ namespace LuxHom.Controllers
             return View();
         }
 
+        [Authorize]
         // POST: Pedidoes/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -75,6 +78,7 @@ namespace LuxHom.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize]
         // GET: Pedidoes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -93,6 +97,7 @@ namespace LuxHom.Controllers
             return View(pedido);
         }
 
+        [Authorize]
         // POST: Pedidoes/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -100,38 +105,11 @@ namespace LuxHom.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Correlativo,PersonaId,ProductoId,Cantidad,FechaPedido")] LuxHom.Models.Pedido pedido)
         {
-            //if (id != pedido.Correlativo)
-            //{
-            //    return NotFound();
-            //}
-
-            //if (ModelState.IsValid)
-            //{
-            //    try
-            //    {
-            //        _context.Update(pedido);
-            //        await _context.SaveChangesAsync();
-            //    }
-            //    catch (DbUpdateConcurrencyException)
-            //    {
-            //        if (!PedidoExists(pedido.Correlativo))
-            //        {
-            //            return NotFound();
-            //        }
-            //        else
-            //        {
-            //            throw;
-            //        }
-            //    }
-            //    return RedirectToAction(nameof(Index));
-            //}
-            //ViewData["PersonaId"] = new SelectList(_context.Personas, "Id", "Id", pedido.PersonaId);
-            //ViewData["ProductoId"] = new SelectList(_context.Productos, "Id", "Id", pedido.ProductoId);
-            //return View(pedido);
             var pedidos = await Functions.APIService.PedidoUpdate(pedido);
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize]
         // GET: Pedidoes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -152,6 +130,7 @@ namespace LuxHom.Controllers
             return View(pedido);
         }
 
+        [Authorize]
         // POST: Pedidoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
